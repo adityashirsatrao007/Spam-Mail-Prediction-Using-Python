@@ -1,69 +1,72 @@
+```markdown
 # 📧 Spam Mail Prediction Using Python
 
-This project is a **machine learning model** that predicts whether an email is **Spam** or **Ham (Not Spam)** using **Python, scikit-learn, and TF-IDF Vectorization**.
+A **machine learning project** that predicts whether an email is **Spam** or **Ham (Not Spam)** using **Python, scikit-learn, and TF-IDF Vectorization**.
 
 ---
 
 ## 📌 Overview
-
-Email spam is one of the most common problems in communication systems.  
-This project demonstrates how to train a **Logistic Regression** classifier to filter spam emails effectively.  
-It includes data preprocessing, feature extraction, model training, evaluation, and making predictions on custom input.
+This project demonstrates how to train a **Logistic Regression** model to classify emails as spam or ham.  
+The workflow covers **data preprocessing, feature extraction, model training, evaluation, and prediction** on new inputs.
 
 ---
 
 ## ✨ Features
-
-- Clean and preprocess email dataset  
-- Convert email text into numerical form using **TF-IDF Vectorizer**  
-- Train a **Logistic Regression model** for classification  
-- Evaluate model accuracy on training and testing sets  
-- Predict whether new/unseen emails are spam or ham  
+- Email text preprocessing  
+- TF-IDF vectorization for feature extraction  
+- Logistic Regression for classification  
+- Accuracy evaluation on training & test data  
+- Custom email spam prediction system  
 
 ---
 
 ## 📂 Project Structure
-├── spam_mail_Predection.ipynb # Jupyter Notebook with implementation
-├── mail_data.csv # Dataset containing spam/ham emails
-└── README.md # Documentation
+```
 
+├── spam\_mail\_Predection.ipynb   # Jupyter Notebook with implementation
+├── mail\_data.csv                # Dataset containing spam/ham emails
+└── README.md                    # Documentation
+
+````
 
 ---
 
 ## ⚙️ Installation
-
-1. Clone this repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/adityashirsatrao007/Spam-Mail-Prediction-Using-Python.git
    cd Spam-Mail-Prediction-Using-Python
+````
 
+2. Install dependencies:
 
-Install required libraries:
+   ```bash
+   pip install pandas numpy scikit-learn jupyter
+   ```
 
-pip install pandas numpy scikit-learn jupyter
+3. Run the notebook:
 
+   ```bash
+   jupyter notebook spam_mail_Predection.ipynb
+   ```
 
-Run the notebook:
+---
 
-jupyter notebook spam_mail_Predection.ipynb
+## 🚀 Workflow
 
-🚀 Workflow
+1. **Load Dataset** → Import CSV data into pandas DataFrame
+2. **Preprocess Data** → Handle missing values, encode labels (spam=0, ham=1)
+3. **Split Data** → Train-Test split
+4. **Vectorize Text** → TF-IDF vectorizer to convert text into feature vectors
+5. **Train Model** → Logistic Regression classifier
+6. **Evaluate Model** → Accuracy on training & testing sets
+7. **Predict** → Classify custom emails as spam/ham
 
-Load Dataset – Import CSV data into pandas DataFrame
+---
 
-Data Preprocessing – Handle missing values, label encode spam/ham
+## 🖥️ Example Prediction
 
-Train-Test Split – Split dataset for training and evaluation
-
-Feature Extraction – Use TF-IDF Vectorizer to convert text into vectors
-
-Model Training – Train a Logistic Regression classifier
-
-Evaluation – Calculate accuracy on training and test sets
-
-Prediction – Test model with custom email input
-
-🖥️ Example Prediction
+```python
 input_mail = ["Congratulations! You have won a free ticket. Claim now!"]
 input_vector = tfidf_vectorizer.transform(input_mail)
 prediction = model.predict(input_vector)
@@ -72,41 +75,46 @@ if prediction[0] == 1:
     print("Ham Mail (Not Spam)")
 else:
     print("Spam Mail")
+```
 
+**Output:**
 
-Output:
-
+```
 Spam Mail
+```
 
-📊 Results
+---
 
-Training Accuracy: ~96–97%
+## 📊 Results
 
-Testing Accuracy: ~95–96%
+* **Training Accuracy:** \~96–97%
+* **Testing Accuracy:** \~95–96%
 
-The Logistic Regression model performs efficiently in classifying spam vs ham emails.
+The model performs effectively in classifying spam emails.
 
-🔮 Future Enhancements
+---
 
-Experiment with other classifiers (Naive Bayes, Random Forest, SVM)
+## 🔮 Future Enhancements
 
-Add advanced NLP techniques (Word Embeddings, BERT)
+* Try other ML models (Naive Bayes, SVM, Random Forest)
+* Add evaluation metrics (Precision, Recall, F1-Score, ROC-AUC)
+* Use advanced NLP models (Word2Vec, BERT)
+* Deploy as a **Flask/Streamlit web app**
 
-Deploy as a web app using Flask/Streamlit for real-time spam detection
+---
 
-Evaluate with additional metrics (Precision, Recall, F1-score, ROC-AUC)
+## 📜 License
 
-📜 License
+This project is **open-source** and available for educational use.
 
-This project is open-source and free to use for educational purposes.
+---
 
-🙌 Acknowledgements
+## 🙌 Acknowledgements
 
-scikit-learn
- for machine learning algorithms
+* [scikit-learn](https://scikit-learn.org/)
+* [pandas](https://pandas.pydata.org/)
+* [numpy](https://numpy.org/)
+* Dataset from Kaggle / open-source repositories
 
-pandas
- & numpy
- for data handling
-
-Dataset from Kaggle / open-source repositories
+```
+```
