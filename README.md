@@ -23,4 +23,90 @@ It includes data preprocessing, feature extraction, model training, evaluation, 
 ---
 
 ## 📂 Project Structure
+├── spam_mail_Predection.ipynb # Jupyter Notebook with implementation
+├── mail_data.csv # Dataset containing spam/ham emails
+└── README.md # Documentation
 
+
+---
+
+## ⚙️ Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/adityashirsatrao007/Spam-Mail-Prediction-Using-Python.git
+   cd Spam-Mail-Prediction-Using-Python
+
+
+Install required libraries:
+
+pip install pandas numpy scikit-learn jupyter
+
+
+Run the notebook:
+
+jupyter notebook spam_mail_Predection.ipynb
+
+🚀 Workflow
+
+Load Dataset – Import CSV data into pandas DataFrame
+
+Data Preprocessing – Handle missing values, label encode spam/ham
+
+Train-Test Split – Split dataset for training and evaluation
+
+Feature Extraction – Use TF-IDF Vectorizer to convert text into vectors
+
+Model Training – Train a Logistic Regression classifier
+
+Evaluation – Calculate accuracy on training and test sets
+
+Prediction – Test model with custom email input
+
+🖥️ Example Prediction
+input_mail = ["Congratulations! You have won a free ticket. Claim now!"]
+input_vector = tfidf_vectorizer.transform(input_mail)
+prediction = model.predict(input_vector)
+
+if prediction[0] == 1:
+    print("Ham Mail (Not Spam)")
+else:
+    print("Spam Mail")
+
+
+Output:
+
+Spam Mail
+
+📊 Results
+
+Training Accuracy: ~96–97%
+
+Testing Accuracy: ~95–96%
+
+The Logistic Regression model performs efficiently in classifying spam vs ham emails.
+
+🔮 Future Enhancements
+
+Experiment with other classifiers (Naive Bayes, Random Forest, SVM)
+
+Add advanced NLP techniques (Word Embeddings, BERT)
+
+Deploy as a web app using Flask/Streamlit for real-time spam detection
+
+Evaluate with additional metrics (Precision, Recall, F1-score, ROC-AUC)
+
+📜 License
+
+This project is open-source and free to use for educational purposes.
+
+🙌 Acknowledgements
+
+scikit-learn
+ for machine learning algorithms
+
+pandas
+ & numpy
+ for data handling
+
+Dataset from Kaggle / open-source repositories
